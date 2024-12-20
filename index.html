@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigo Secreto</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Adicionando a biblioteca jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Amigo Secreto de Natal</h1>
+        <p>Cadastre os participantes, adicione uma foto e clique para sortear!</p>
+        
+        <div id="participantes-form">
+            <input type="text" id="nome" placeholder="Nome do participante" />
+            <input type="file" id="foto" accept="image/*" />
+            <button onclick="adicionarParticipante()">Adicionar</button>
+        </div>
+
+        <ul id="lista-participantes">
+            <!-- Lista de participantes será exibida aqui -->
+        </ul>
+
+        <button id="sorteio-btn" onclick="sorteio()">Sortear Amigo Secreto</button>
+
+        <div id="links-resultados" class="links-resultados">
+            <!-- Links para download dos PDFs serão exibidos aqui -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
